@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Nosotros
+    Página principal
 @endsection
