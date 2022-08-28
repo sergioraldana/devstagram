@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,6 @@ Route::get('/', function () {
     return view('principal');
 });
 
-Route::get('/nosotros', function () {
-    return view('nosotros');
-});
+// Ruta que llama a un controlador y el nombre de la vista.
+Route::get('/register', [RegisterController::class, 'index'])->name('register'); // Ahora se pueden usar enlaces con el helper route()
+Route::post('/register', [RegisterController::class, 'store']);
